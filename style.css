@@ -1,0 +1,61 @@
+html {
+	height:100%;
+}
+body {
+	height:100%;
+}
+table {
+	border-collapse: collapse;
+    width:90%;
+	table-layout:fixed;
+}
+#DecidedEquipmentRod {
+	width:100%;
+	height:30%;
+	float:left;
+}
+#DecidedEquipmentReel {
+	width:100%;
+	height:30%;
+	float:left;
+}
+#DecidedEquipmentMotherLine {
+	width:100%;
+	height:30%;
+	float:left;
+}
+#DecidedEquipmentRodProperty {
+	width:100%;
+	height:30%;
+	float:left;
+
+}
+#DecidedEquipmentReelProperty {
+	width:100%;
+	height:30%;
+	float:left;
+}
+#DecidedEquipmentMotherLineProperty {
+	width:100%;
+	height:30%;
+	float:left;
+}
+#RodSuggestion {
+	width:auto;
+	height:30%;
+	float:left;
+}
+#ReelSuggestion {
+	width:auto;
+	height:30%;
+	float:left;
+}
+#LineSuggestion {
+	width:auto;
+	height:30%;
+	float:left;
+}
+hr {
+	border-style: dashed;
+	border-width: 1px;
+}
