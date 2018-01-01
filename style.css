@@ -1,61 +1,192 @@
 html {
-	height:100%;
+	height:100vh;
+	width:100vw
 }
 body {
+	height:100vh;
+	width:90vw;
+	position: absolute;
+    left: 5%;
+	font-family: Microsoft JhengHei;
+}
+#wrapper{
 	height:100%;
 }
-table {
-	border-collapse: collapse;
-    width:90%;
-	table-layout:fixed;
+#SelectBlock{
+	height:35%;
+	background-color:#888888;
+}
+#SelectStyle{
+	float:right;
+	height:5vh;
+}
+#ClearAllDataButton{
+	width:8.5em;
+	height:2.5em;
+	float:left;
+	font-size:1.5em;
+	background-color:#FFFFFF;
+	margin:0.5em;
+}
+#SelectEQ{
+	//height:100%;
+}
+#SelectRodBlock {
+	float:left;
+	text-align:center;
+	//background-color:#989898;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+}
+#SelectReelBlock {
+	float:left;
+	text-align:center;
+	//background-color:#989898;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+}
+#SelectMotherLineBlock {
+	float:left;
+	text-align:center;
+	//background-color:#989898;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+}
+#SelectChildLineBlock {
+	float:left;
+	text-align:center;
+	//background-color:#989898;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
 }
 #DecidedEquipmentRod {
-	width:100%;
-	height:30%;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+	height:5vh;
+	line-height: 5vh;
 	float:left;
+	font-weight: bold;
+	font-size: 130%;
+	background-color:#989898;
+	text-align:center;
 }
 #DecidedEquipmentReel {
-	width:100%;
-	height:30%;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+	height:5vh;
+	line-height: 5vh;
 	float:left;
+	font-weight: bold;
+	font-size: 130%;
+	background-color:#989898;
+	text-align:center;
 }
 #DecidedEquipmentMotherLine {
-	width:100%;
-	height:30%;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+	height:5vh;
+	line-height: 5vh;
 	float:left;
+	font-weight: bold;
+	font-size: 130%;
+	background-color:#989898;
+	text-align:center;
+}
+#DecidedEquipmentChildLine {
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+	height:5vh;
+	line-height: 5vh;
+	float:left;
+	font-weight: bold;
+	font-size: 130%;
+	background-color:#989898;
+	text-align:center;
 }
 #DecidedEquipmentRodProperty {
-	width:100%;
-	height:30%;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+	height:15vh;
 	float:left;
-
+	position:relative;
+	background-color:#989898;
 }
 #DecidedEquipmentReelProperty {
-	width:100%;
-	height:30%;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+	height:15vh;
 	float:left;
+	background-color:#989898;
 }
 #DecidedEquipmentMotherLineProperty {
-	width:100%;
-	height:30%;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+	height:15vh;
 	float:left;
+	background-color:#989898;
+}
+#DecidedEquipmentChildLineProperty {
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+	height:15vh;
+	float:left;
+	background-color:#989898;
 }
 #RodSuggestion {
-	width:auto;
-	height:30%;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
 	float:left;
 }
 #ReelSuggestion {
-	width:auto;
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
+	float:left;
+}
+#MotherLineSuggestion {
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
 	height:30%;
 	float:left;
 }
-#LineSuggestion {
-	width:auto;
-	height:30%;
+#ChildLineSuggestion {
+	width:23%;
+	padding:0.5%;
+	margin:0.5%;
 	float:left;
 }
-hr {
-	border-style: dashed;
-	border-width: 1px;
+//#SelectRodBrand				{background-color:#989898;}
+#SelectReelBrand 			{background-color:#989898;}
+#SelectMotherLineBrand 		{background-color:#989898;}
+#SelectChildLineBrand 		{background-color:#989898;}
+#SelectRodStyle				{background-color:#989898;}
+#SelectReelStyle 			{background-color:#989898;}
+#SelectMotherLineStyle 		{background-color:#989898;}
+#SelectChildLineStyle 		{background-color:#989898;}
+#SelectRodProperty			{background-color:#989898;}
+#SelectReelProperty 		{background-color:#989898;}
+#SelectMotherLineProperty 	{background-color:#989898;}
+#SelectChildLineProperty 	{background-color:#989898;}
+.clear{clear:both;}
+#AllRights {
+	background: #FFFFFF;
+	border-top: 0;
+	float:right;
+	color: #c0c0c0;
+	overflow: hidden;
+	padding: 0 0 0 0;
 }
