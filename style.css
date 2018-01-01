@@ -1,24 +1,21 @@
 html {
-	height:100vh;
-	width:100vw
+	height:100%;
+	//width:100%
 }
 body {
-	height:100vh;
-	width:90vw;
+	height:100%;
+	//width:90%;
 	position: absolute;
     left: 5%;
 	font-family: Microsoft JhengHei;
 }
-#wrapper{
-	height:100%;
-}
-#SelectBlock{
-	height:35%;
-	background-color:#888888;
+.head-data{
+	width:104em;
+	height:5em;
 }
 #SelectStyle{
 	float:right;
-	height:5vh;
+	height:5em;
 }
 #ClearAllDataButton{
 	width:8.5em;
@@ -28,146 +25,17 @@ body {
 	background-color:#FFFFFF;
 	margin:0.5em;
 }
-#SelectEQ{
-	//height:100%;
+.SelectEQBlock{
+	background-color:#888888;
+	width:104em;
 }
-#SelectRodBlock {
+.SelectEQ{
+	width:25em;
+	height:3em;
+	margin:0.5em;
+	background-color:#989898;
 	float:left;
 	text-align:center;
-	//background-color:#989898;
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-}
-#SelectReelBlock {
-	float:left;
-	text-align:center;
-	//background-color:#989898;
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-}
-#SelectMotherLineBlock {
-	float:left;
-	text-align:center;
-	//background-color:#989898;
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-}
-#SelectChildLineBlock {
-	float:left;
-	text-align:center;
-	//background-color:#989898;
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-}
-#DecidedEquipmentRod {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	height:5vh;
-	line-height: 5vh;
-	float:left;
-	font-weight: bold;
-	font-size: 130%;
-	background-color:#989898;
-	text-align:center;
-}
-#DecidedEquipmentReel {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	height:5vh;
-	line-height: 5vh;
-	float:left;
-	font-weight: bold;
-	font-size: 130%;
-	background-color:#989898;
-	text-align:center;
-}
-#DecidedEquipmentMotherLine {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	height:5vh;
-	line-height: 5vh;
-	float:left;
-	font-weight: bold;
-	font-size: 130%;
-	background-color:#989898;
-	text-align:center;
-}
-#DecidedEquipmentChildLine {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	height:5vh;
-	line-height: 5vh;
-	float:left;
-	font-weight: bold;
-	font-size: 130%;
-	background-color:#989898;
-	text-align:center;
-}
-#DecidedEquipmentRodProperty {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	height:15vh;
-	float:left;
-	position:relative;
-	background-color:#989898;
-}
-#DecidedEquipmentReelProperty {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	height:15vh;
-	float:left;
-	background-color:#989898;
-}
-#DecidedEquipmentMotherLineProperty {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	height:15vh;
-	float:left;
-	background-color:#989898;
-}
-#DecidedEquipmentChildLineProperty {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	height:15vh;
-	float:left;
-	background-color:#989898;
-}
-#RodSuggestion {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	float:left;
-}
-#ReelSuggestion {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	float:left;
-}
-#MotherLineSuggestion {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	height:30%;
-	float:left;
-}
-#ChildLineSuggestion {
-	width:23%;
-	padding:0.5%;
-	margin:0.5%;
-	float:left;
 }
 //#SelectRodBrand				{background-color:#989898;}
 #SelectReelBrand 			{background-color:#989898;}
@@ -181,12 +49,38 @@ body {
 #SelectReelProperty 		{background-color:#989898;}
 #SelectMotherLineProperty 	{background-color:#989898;}
 #SelectChildLineProperty 	{background-color:#989898;}
-.clear{clear:both;}
+.DecideBlock{
+	height:22em;
+	width:104em;
+	background-color:#888888;
+}
+.DecideEQ{
+	width:20.83333em;
+	height:2.5em;
+	margin:0.41666em;	
+	float:left;
+	font-weight: bold;
+	font-size: 120%;
+	line-height: 2.5em;
+	background-color:#989898;
+	text-align:center;
+}
+.DecideProperty{
+	width:25em;
+	height:13em;
+	margin:0.5em;
+	float:left;
+	background-color:#989898;
+}
+.suggestion{
+	width:25em;
+	margin:0.5em;	
+	float:left;
+}
 #AllRights {
 	background: #FFFFFF;
-	border-top: 0;
 	float:right;
 	color: #c0c0c0;
 	overflow: hidden;
-	padding: 0 0 0 0;
 }
+.clear{clear:both;}
