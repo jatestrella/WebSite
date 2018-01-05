@@ -49,12 +49,12 @@ body {
 #SelectReelProperty 		{background-color:#989898;}
 #SelectMotherLineProperty 	{background-color:#989898;}
 #SelectChildLineProperty 	{background-color:#989898;}
-.DecideBlock{
+.DecideBlock {
 	height:22em;
 	width:104em;
 	background-color:#888888;
 }
-.DecideEQ{
+.DecideEQ {
 	width:20.83333em;
 	height:2.5em;
 	margin:0.41666em;	
@@ -65,17 +65,24 @@ body {
 	background-color:#989898;
 	text-align:center;
 }
-.DecideProperty{
+.DecideProperty {
 	width:25em;
 	height:13em;
 	margin:0.5em;
 	float:left;
 	background-color:#989898;
 }
-.suggestion{
+.suggestion {
 	width:25em;
 	margin:0.5em;	
 	float:left;
+}
+.facebook {
+	float:left;
+}
+.update {
+	float:right;
+	width:30em;
 }
 #AllRights {
 	background: #FFFFFF;
