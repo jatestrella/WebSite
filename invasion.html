@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>魔臭世界衝突倒數計時器</title>
+<h1 align=center style="font-family:微軟正黑體;">－魔臭世界衝突倒數計時器－</h1>
+</head>
+<body onload="ShowTime()">
+
+<div id="InvPasstime" align=center style="font-family:微軟正黑體; font-size:1.5em; color: #707070; " ></div>
+<br/>
+<br/>
+<div id="InvCometime" align=center style="font-family:微軟正黑體; font-size:5.0em; font-weight:bold"></div>
+<br/>
+<br/>
+<div align=center style="font-family:微軟正黑體; font-size:1.5em;">下一波衝突時間</div><br/><br/>
+<div id="Next_1" align=center style="font-family:微軟正黑體; font-size:1.5em;"></div>
+<div id="Next_2" align=center style="font-family:微軟正黑體; font-size:1.5em;"></div>
+<div id="Next_3" align=center style="font-family:微軟正黑體; font-size:1.5em"></div>
+</body>
+
+
+<script type='text/javascript'>
+
+
+function ShowTime(){
+
+var InvPeriod = 7*60*60*1000
+var RestPeriod = 12*60*60*1000
+var now = new Date();
+var start = new Date(2019,1-1,7, 6);
+var Location = ["祖達薩","提拉加德海峽","納茲米爾","斯陀頌恩谷地","沃魯敦","佐司瓦"]
+
+var Passtime = now.getTime()- start.getTime()
+var HowManyPeriod = Math.floor(Passtime / ( InvPeriod + RestPeriod ))
+
+var CalTime = (Passtime - HowManyPeriod*( InvPeriod + RestPeriod ))
+
+var InvHour = ('0'+ Math.floor((CalTime )/(1000*60*60))).substr(-2)
+var InvMinite = ('0'+ Math.floor((CalTime - InvHour*60*60*1000)/(1000*60))).substr(-2)
+var InvSecond = ('0'+ Math.floor((CalTime - InvHour*60*60*1000 - InvMinite*60*1000)/(1000))).substr(-2)
+
+var Start_1 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod ))
+var StartMonth_1 = Start_1.getMonth()+1;
+var StartDate_1 = Start_1.getDate();
+var StartHour_1 = Start_1.getHours();
+var StartDay_1 = Start_1.getDay();
+var End_1 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod ) + InvPeriod)
+var EndMonth_1 = End_1.getMonth()+1;
+var EndDate_1 = End_1.getDate();
+var EndHour_1 = End_1.getHours();
+var EndDay_1 = End_1.getDay();
+
+var NextStart_1 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*2)
+var NextStartMonth_1 = NextStart_1.getMonth()+1;
+var NextStartDate_1 = NextStart_1.getDate();
+var NextStartHour_1 = NextStart_1.getHours();
+var NextStartDay_1 = NextStart_1.getDay();
+var NextEnd_1 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*2 + InvPeriod)
+var NextEndMonth_1 = NextEnd_1.getMonth()+1;
+var NextEndDate_1 = NextEnd_1.getDate();
+var NextEndHour_1 = NextEnd_1.getHours();
+var NextEndDay_1 = NextEnd_1.getDay();
+
+var NextStart_2 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*3)
+var NextStartMonth_2 = NextStart_2.getMonth()+1;
+var NextStartDate_2 = NextStart_2.getDate();
+var NextStartHour_2 = NextStart_2.getHours();
+var NextStartDay_2 = NextStart_2.getDay();
+var NextEnd_2 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*3 + InvPeriod)
+var NextEndMonth_2 = NextEnd_2.getMonth()+1;
+var NextEndDate_2 = NextEnd_2.getDate();
+var NextEndHour_2 = NextEnd_2.getHours();
+var NextEndDay_2 = NextEnd_2.getDay();
+
+var NextStart_3 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*4)
+var NextStartMonth_3 = NextStart_3.getMonth()+1;
+var NextStartDate_3 = NextStart_3.getDate();
+var NextStartHour_3 = NextStart_3.getHours();
+var NextStartDay_3 = NextStart_3.getDay();
+var NextEnd_3 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*4 + InvPeriod)
+var NextEndMonth_3 = NextEnd_3.getMonth()+1;
+var NextEndDate_3 = NextEnd_3.getDate();
+var NextEndHour_3 = NextEnd_3.getHours();
+var NextEndDay_3 = NextEnd_3.getDay();
+
+var weekday=new Array(7)
+weekday[0]="日"
+weekday[1]="一"
+weekday[2]="二"
+weekday[3]="三"
+weekday[4]="四"
+weekday[5]="五"
+weekday[6]="六"
+
+//var InvMinite = Math.floor((CalTime - InvHour*60*60*1000)/(1000*60))
+//var InvSecond = Math.floor((CalTime - InvHour*60*60*1000 - InvMinite*60*1000)/(1000))
+
+//document.getElementById('now').innerHTML = now;
+//document.getElementById('start').innerHTML = start;
+//document.getElementById('start2').innerHTML = start2;
+//document.getElementById('InvHour').innerHTML = InvHour;
+//document.getElementById('InvMinite').innerHTML = InvMinite;
+//document.getElementById('InvSecond').innerHTML = InvSecond;
+if (InvHour > 7) {
+	var _InvHour = ('0'+ (InvHour - 7)).substr(-2)
+	var WaitHour = ('0'+ (19 - InvHour - 1)).substr(-2)
+	var WaitMinite = ('0'+ (60 - InvMinite)).substr(-2)
+	var WaitSecond = ('0'+ (60 - InvSecond)).substr(-2)
+	document.getElementById('InvPasstime').innerHTML = "距離上一波衝突結束已經過了： " + _InvHour + " : " + InvMinite + " : " + InvSecond + "<br/><br/>下一波衝突：<span style='color:red;font-weight:bold'>" + Location[(HowManyPeriod+1)%6] + "</span>&nbsp;時間剩下... ";
+	document.getElementById('InvCometime').innerHTML = WaitHour + " ： " + WaitMinite + " ： " + WaitSecond;
+} else {
+	var _InvHour = ('0'+ (InvHour - 7)).substr(-2)
+	var RemainHour = ('0'+ (7 - InvHour - 1)).substr(-2)
+	var RemainMinite = ('0'+ (60 - InvMinite)).substr(-2)
+	var RemainSecond = ('0'+ (60 - InvSecond)).substr(-2)
+	document.getElementById('InvPasstime').innerHTML = "<span style='color:red;font-weight:bold'>" + Location[(HowManyPeriod)%6] + "</span>衝突戰<br/>" + ('0'+ StartMonth_1).substr(-2) + "/" + ('0'+ StartDate_1).substr(-2) + "(" + weekday[StartDay_1] + ")&nbsp;&nbsp;" + ('0'+ StartHour_1).substr(-2) + "：00&nbsp;&nbsp;-&nbsp;&nbsp;"+ ('0'+ EndMonth_1).substr(-2) + "/" + ('0'+ EndDate_1).substr(-2) + "(" + weekday[StartDay_1]+ ")&nbsp;&nbsp;" + ('0'+ EndHour_1).substr(-2) + "：00<br/>正在進行，剩餘時間：";
+	//document.getElementById('InvCometime').innerHTML = InvHour + " : " + InvMinite + " : " + InvSecond;
+	document.getElementById('InvCometime').innerHTML = RemainHour + " : " + RemainMinite + " : " + RemainSecond;
+}
+document.getElementById('Next_1').innerHTML = "<span style='font-weight:bold'>" + Location[(HowManyPeriod+1)%6] + "</span><br/>" + ('0'+ NextStartMonth_1).substr(-2) + "/" + ('0'+ NextStartDate_1).substr(-2) + "(" + weekday[NextStartDay_1] + ")&nbsp;&nbsp;" + ('0'+ NextStartHour_1).substr(-2) + "：00&nbsp;&nbsp;-&nbsp;&nbsp;"+ ('0'+ NextEndMonth_1).substr(-2) + "/" + ('0'+ NextEndDate_1).substr(-2) + "(" + weekday[NextStartDay_1]+ ")&nbsp;&nbsp;" + ('0'+ NextEndHour_1).substr(-2) + "：00<br/><br/>";
+document.getElementById('Next_2').innerHTML = "<span style='font-weight:bold'>" + Location[(HowManyPeriod+2)%6] + "</span><br/>" + ('0'+ NextStartMonth_2).substr(-2) + "/" + ('0'+ NextStartDate_2).substr(-2) + "(" + weekday[NextStartDay_2] + ")&nbsp;&nbsp;" + ('0'+ NextStartHour_2).substr(-2) + "：00&nbsp;&nbsp;-&nbsp;&nbsp;"+ ('0'+ NextEndMonth_2).substr(-2) + "/" + ('0'+ NextEndDate_2).substr(-2) + "(" + weekday[NextStartDay_2]+ ")&nbsp;&nbsp;" + ('0'+ NextEndHour_2).substr(-2) + "：00<br/><br/>";
+document.getElementById('Next_3').innerHTML = "<span style='font-weight:bold'>" + Location[(HowManyPeriod+3)%6] + "</span><br/>" + ('0'+ NextStartMonth_3).substr(-2) + "/" + ('0'+ NextStartDate_3).substr(-2) + "(" + weekday[NextStartDay_3] + ")&nbsp;&nbsp;" + ('0'+ NextStartHour_3).substr(-2) + "：00&nbsp;&nbsp;-&nbsp;&nbsp;"+ ('0'+ NextEndMonth_3).substr(-2) + "/" + ('0'+ NextEndDate_3).substr(-2) + "(" + weekday[NextStartDay_3]+ ")&nbsp;&nbsp;" + ('0'+ NextEndHour_3).substr(-2) + "：00<br/><br/>";
+setTimeout('ShowTime()',1000);
+}
+</script>
+ </html>
