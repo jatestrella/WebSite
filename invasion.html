@@ -50,34 +50,34 @@ var EndDate_1 = End_1.getDate();
 var EndHour_1 = End_1.getHours();
 var EndDay_1 = End_1.getDay();
 
-var NextStart_1 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*2)
+var NextStart_1 = new Date(start.getTime()+(HowManyPeriod+1)*( InvPeriod + RestPeriod ))
 var NextStartMonth_1 = NextStart_1.getMonth()+1;
 var NextStartDate_1 = NextStart_1.getDate();
 var NextStartHour_1 = NextStart_1.getHours();
 var NextStartDay_1 = NextStart_1.getDay();
-var NextEnd_1 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*2 + InvPeriod)
+var NextEnd_1 = new Date(start.getTime()+(HowManyPeriod+1)*( InvPeriod + RestPeriod ) + InvPeriod)
 var NextEndMonth_1 = NextEnd_1.getMonth()+1;
 var NextEndDate_1 = NextEnd_1.getDate();
 var NextEndHour_1 = NextEnd_1.getHours();
 var NextEndDay_1 = NextEnd_1.getDay();
 
-var NextStart_2 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*3)
+var NextStart_2 = new Date(start.getTime()+(HowManyPeriod+2)*( InvPeriod + RestPeriod ))
 var NextStartMonth_2 = NextStart_2.getMonth()+1;
 var NextStartDate_2 = NextStart_2.getDate();
 var NextStartHour_2 = NextStart_2.getHours();
 var NextStartDay_2 = NextStart_2.getDay();
-var NextEnd_2 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*3 + InvPeriod)
+var NextEnd_2 = new Date(start.getTime()+(HowManyPeriod+2)*( InvPeriod + RestPeriod ) + InvPeriod)
 var NextEndMonth_2 = NextEnd_2.getMonth()+1;
 var NextEndDate_2 = NextEnd_2.getDate();
 var NextEndHour_2 = NextEnd_2.getHours();
 var NextEndDay_2 = NextEnd_2.getDay();
 
-var NextStart_3 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*4)
+var NextStart_3 = new Date(start.getTime()+(HowManyPeriod+3)*( InvPeriod + RestPeriod ))
 var NextStartMonth_3 = NextStart_3.getMonth()+1;
 var NextStartDate_3 = NextStart_3.getDate();
 var NextStartHour_3 = NextStart_3.getHours();
 var NextStartDay_3 = NextStart_3.getDay();
-var NextEnd_3 = new Date(start.getTime()+HowManyPeriod*( InvPeriod + RestPeriod )*4 + InvPeriod)
+var NextEnd_3 = new Date(start.getTime()+(HowManyPeriod+3)*( InvPeriod + RestPeriod ) + InvPeriod)
 var NextEndMonth_3 = NextEnd_3.getMonth()+1;
 var NextEndDate_3 = NextEnd_3.getDate();
 var NextEndHour_3 = NextEnd_3.getHours();
@@ -101,10 +101,10 @@ if (InvHour > 7) {
 	document.getElementById('InvCometime').innerHTML = WaitHour + " ： " + WaitMinite + " ： " + WaitSecond;
 } else {
 	var _InvHour = ('0'+ (InvHour - 7)).substr(-2)
-	var RemainHour = ('0'+ (7 - InvHour - 1)).substr(-2)
-	var RemainMinite = ('0'+ (60 - InvMinite)).substr(-2)
+	var RemainHour = ('0'+ (6 - InvHour)).substr(-2)
+	var RemainMinite = ('0'+ (59 - InvMinite)).substr(-2)
 	var RemainSecond = ('0'+ (60 - InvSecond)).substr(-2)
-	document.getElementById('InvPasstime').innerHTML = "<span style='color:red;font-weight:bold'>" + Location[(HowManyPeriod)%6] + "</span>衝突戰<br/>" + ('0'+ StartMonth_1).substr(-2) + "/" + ('0'+ StartDate_1).substr(-2) + "(" + weekday[StartDay_1] + ")&nbsp;&nbsp;" + ('0'+ StartHour_1).substr(-2) + "：00&nbsp;&nbsp;-&nbsp;&nbsp;"+ ('0'+ EndMonth_1).substr(-2) + "/" + ('0'+ EndDate_1).substr(-2) + "(" + weekday[StartDay_1]+ ")&nbsp;&nbsp;" + ('0'+ EndHour_1).substr(-2) + "：00<br/>正在進行，剩餘時間：";
+	document.getElementById('InvPasstime').innerHTML = "<span style='color:red;font-weight:bold'>" + Location[(HowManyPeriod)%6] + "</span>衝突戰<br/>" + ('0'+ StartMonth_1).substr(-2) + "/" + ('0'+ StartDate_1).substr(-2) + "(" + weekday[StartDay_1] + ")&nbsp;&nbsp;" + ('0'+ StartHour_1).substr(-2) + "：00&nbsp;&nbsp;-&nbsp;&nbsp;"+ ('0'+ EndMonth_1).substr(-2) + "/" + ('0'+ EndDate_1).substr(-2) + "(" + weekday[EndDay_1]+ ")&nbsp;&nbsp;" + ('0'+ EndHour_1).substr(-2) + "：00<br/>正在進行，剩餘時間：";
 	//document.getElementById('InvCometime').innerHTML = InvHour + " : " + InvMinite + " : " + InvSecond;
 	document.getElementById('InvCometime').innerHTML = RemainHour + " : " + RemainMinite + " : " + RemainSecond;
 }
