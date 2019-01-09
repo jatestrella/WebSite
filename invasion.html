@@ -103,7 +103,7 @@ weekday[5]="五"
 weekday[6]="六"
 
 
-if (InvHour > 7) {
+if (InvHour >= 7) {
 	var _InvHour = ('0'+ (InvHour - 7)).substr(-2)
 	var WaitHour = ('0'+ (19 - InvHour - 1)).substr(-2)
 	var WaitMinite = ('0'+ (60 - InvMinite)).substr(-2)
